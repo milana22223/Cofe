@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Science+Gothic:wght@100..900&display=swap');
+
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background: #7e3f3f;
+    align-items: center;
+}
+
+.header__logo {
+    background-color: white;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #7e3f3f;
+    padding: 4px 12px;
+}
+
+.nav__list {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
+
+.nav__link {
+    color: #7e3f3f;
+    padding: 4px 12px;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 15px;
+}
+
+.nav__link:hover {
+    background-color: #7e3f3f;
+    color: white;
+    border: 1px solid white;
+    border-radius: 15px;
+}
+
+main {
+    padding: 1rem;
+    background-color: #e3b6b6;
+}
+
+.circle-frame {
+    margin-bottom: 40px;
+    border: 2px solid black;
+    border-radius: 30px;
+    display: table;
+    padding: 10px;
+    font-family: "Science Gothic", sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    grid-column: 1 / -1;
+    justify-self: start;
+}
+
+.circle-frame:hover {
+    background-color: rgb(236, 233, 233);
+}
+
+.description {
+    border: 2px solid #000;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 30px;
+    background-color: white;
+}
+
+/*1 секция*/
+.smt__on__unk__lang {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center
+}
+
+.smt__on__unk__lang img {
+    grid-column: 1 / -1;
+}
+
+.text__unk__lang {
+    font-family: "Comfortaa", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    list-style: none;
+    margin: 10px;
+    justify-items: center;
+}
+
+/*2 секция*/
+.main__offers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+    padding: 10px;
+}
+
+.offer {
+    display: grid;
+    gap: 10px;
+    text-align: center;
+    justify-items: center;
+}
+
+.offer img {
+    width: 70%;
+    display: block;
+}
+
+.main__offers p {
+    font-family: "Comfortaa", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/*3 секция*/
+.miracle__box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+}
+
+.miracle__box img {
+    grid-column: 2;
+    width: 100%;
+}
+
+.text__miracle {
+    font-family: "Comfortaa", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    list-style: none;
+    margin: 10px;
+    justify-items: center;
+}
+
+/*4 секция*/
+.benefit {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+    padding: 10px;
+}
+
+.ben {
+    display: grid;
+    gap: 10px;
+    text-align: center;
+    justify-items: center;
+}
+
+.ben img {
+    width: 70%;
+    display: block;
+}
+
+.benefit p {
+    font-family: "Comfortaa", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/*footer*/
+.foot {
+    width: 300px;
+    border-radius: 15px;
+    padding: 4px 10px;
+    color: white;
+    font-size: 1.5rem;
+    background-color: #7e3f3f;
+    margin: 20px 40px;
+}
+
+/*extra block*/
+.masonry-grid__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    background-color: white;
+    margin-top: 40px;
+    align-items: stretch;
+}
+
+.masonry-item {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-family: "Comfortaa", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 5px;
+    padding: 10px;
+    width: 1fr;
+    height: auto;
+}
+
+@media (max-width: 1200px) {
+
+    .smt__on__unk__lang img {
+        grid-column: 1 / -1;
+        width: 1000px
+    }
+}
+
+@media (max-width: 1120px) {
+    .miracle__box {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+    }
+
+    .miracle__box img {
+        grid-column: 1;
+    }
+
+    .benefit {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        justify-items: center;
+        padding: 10px;
+    }
+
+    .smt__on__unk__lang img {
+        grid-column: 1 / -1;
+        width: 900px
+    }
+}
+
+@media (max-width: 1050px) {
+    .masonry-grid__container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 1000px) {
+    .main__offers {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 975px){
+    .smt__on__unk__lang img {
+        grid-column: 1 / -1;
+        width: 720px
+    }
+}
+
+@media (max-width: 930px) {
+    .header {
+        flex-direction: column;
+        gap: 24px;
+    }
+}
+
+@media (max-width: 800px) {
+    .masonry-grid__container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .benefit {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+        justify-items: center;
+        padding: 10px;
+    }
+
+    .main__offers {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .nav__list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .circle-frame {
+        font-size: 15px;
+    }
+
+    .text__unk__lang {
+        font-size: 15px;
+    }
+
+    .main__offers p {
+        font-size: 15px;
+    }
+
+    .text__miracle {
+        font-size: 15px;
+    }
+
+    .benefit p {
+        font-size: 15px;
+    }
+
+    .masonry-item {
+        font-size: 15px;
+    }
+
+    .smt__on__unk__lang img {
+        grid-column: 1 / -1;
+        width: 500px
+    }
+}
+
+@media (max-width: 560px) {
+    .smt__on__unk__lang img {
+        grid-column: 1 / -1;
+        width: 380px
+    }
+}
+
+@media (max-width: 450px) {
+    .smt__on__unk__lang img {
+        grid-column: 1 / -1;
+        width: 300px
+    }
+}
+
+@media (max-width: 360px) {
+    .smt__on__unk__lang img {
+        grid-column: 1 / -1;
+        width: 200px
+    }
+}
