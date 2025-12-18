@@ -1,0 +1,121 @@
+header class ="header">
+    <div class="header__logo">Логотип</div>
+    <nav class="header__nav nav">
+        <ul class="nav__list">
+            <li class="nav__item nav__item--active">
+
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<section class="cards">
+    <div class="card card--featured">
+        <h3 class="card__title">Заголовок</h3>
+        <p class="card__text">Текст карточки</p>
+    </div>
+</section>
+
+.header {
+ display: flex;
+ justify-content: space-between;
+ padding: 1rem;
+ background: #fff;
+}
+.header__logo {
+ font-size: 1.5rem;
+ font-weight: bold;
+}
+.nav__list {
+ display: flex;
+ gap: 1rem;
+ list-style: none;
+}
+.nav__item--active .nav__link {
+ color: #2c5530;
+ border-bottom: 2px solid #2c5530;
+}
+.card {
+    padding: 1rem;
+ border: 1px solid #ddd;
+ border-radius: 8px;
+}
+.card--featured {
+ background: #f8f9fa;
+ border-color: #2c5530;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Science+Gothic:wght@100..900&display=swap');
+
+.nav__link {
+ transition: all 0.3s ease;
+ padding: 0.5rem 1rem;
+ border-radius: 4px;
+}
+.nav__link:hover {
+ background-color: #f0f0f0;
+ transform: translateY(-1px);
+}
+.nav__link:focus {
+ outline: 2px solid #2c5530;
+ outline-offset: 2px;
+}
+.nav__link:active {
+ transform: translateY(0);
+}
+.card {
+ transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+ transform: translateY(-5px);
+ box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.button {
+ background-color: #2c5530;
+ color: white;
+ padding: 0.75rem 1.5rem;
+ border: none;
+ border-radius: 6px;
+ cursor: pointer;
+ transition: all 0.3s ease;
+}
+.button:hover {
+ background-color: #1e3a22;
+ transform: scale(1.05);
+}
+.button:active {
+ transform: scale(0.98);
+}
+.button:disabled {
+ background-color: #ccc;
+ cursor: not-allowed;
+ transform: none;
+}
+
+/* Плавное появление элементов */
+.fade-in {
+ animation: fadeIn 0.5s ease-in;
+}
+@keyframes fadeIn {
+ from { opacity: 0; transform: translateY(10px); }
+ to { opacity: 1; transform: translateY(0); }
+}
+/* Подсветка текущего раздела */
+.section-highlight {
+ transition: all 0.3s ease;
+}
+.section-highlight:hover {
+ border-left: 4px solid #2c5530;
+ padding-left: 1rem;
+}
+/* Интерактивные карточки */
+.interactive-card {
+ cursor: pointer;
+ transition: all 0.3s ease;
+}
+.interactive-card:hover {
+ transform: translateY(-5px);
+ box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
