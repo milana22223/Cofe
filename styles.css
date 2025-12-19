@@ -104,12 +104,13 @@ nav a:hover::after {
 
 .logo {
     position: absolute;
-    top: 30px;
-    left: 30px;
-    width: 60px;
+    top: 20px;
+    left: 50px;
+    width: 150px;
     height: auto;
-
+    z-index: 3;
 }
+
 header h1 {
     position: absolute;
     bottom: 120px;
@@ -134,7 +135,7 @@ main {
     padding: 80px 20px;
 }
 
-/* Секция "Кофе - Создай свою базу" */
+/* Секция "Кофе - Создай свою базу" - ВЕРТИКАЛЬНЫЙ ВАРИАНТ */
 .base-section {
     text-align: center;
     margin-bottom: 100px;
@@ -145,7 +146,7 @@ main {
     text-transform: uppercase;
     color: #c09b5f;
     letter-spacing: 3px;
-    margin-bottom: 15px;
+    margin-bottom: 15px; /* Уменьшили отступ */
     font-weight: 600;
 }
 
@@ -169,22 +170,29 @@ main {
     background-color: #c5a063;
 }
 
+/* ВЕРТИКАЛЬНАЯ СЕТКА */
 .features {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 30px;
+    flex-direction: column; /* Главное изменение: вертикальное направление */
+    align-items: center; /* Центрируем все элементы */
+    gap: 40px; /* Расстояние между блоками */
+    max-width: 800px; /* Ограничиваем ширину */
+    margin: 0 auto; /* Центрируем */
 }
 
 .feature {
-    flex: 1;
-    min-width: 250px;
-    padding: 30px 20px;
-    transition: transform 0.3s;
+    width: 100%; /* Занимает всю доступную ширину */
+    max-width: 600px; /* Максимальная ширина блока */
+    padding: 30px 40px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #f9f9f9; /* Легкий фон для выделения */
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
 .feature:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .feature img {
@@ -205,7 +213,7 @@ main {
     font-size: 16px;
     color: #666;
     line-height: 1.8;
-    max-width: 250px;
+    max-width: 100%; /* Убираем фиксированную ширину */
     margin: 0 auto;
 }
 
@@ -217,7 +225,7 @@ main {
 .favorites-section h2 {
     font-size: 16px;
     text-transform: uppercase;
-    color: #c5a063;
+    color: #151D28;
     letter-spacing: 3px;
     text-align: center;
     margin-bottom: 15px;
@@ -247,19 +255,22 @@ main {
 
 .products {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
+
 }
 
 .product {
-    flex: 1;
+    flex: 0 0 calc(50% - 15px);
     min-width: 270px;
     background-color: #f9f9f9;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
     transition: transform 0.4s, box-shadow 0.4s;
+    box-sizing: border-box;
+
 }
 
 .product:hover {
@@ -275,7 +286,7 @@ main {
 
 .price {
     font-size: 28px;
-    color: #c5a063;
+    color: #000000;
     font-weight: bold;
     padding: 20px 25px 10px;
 }
@@ -283,7 +294,7 @@ main {
 .product h4 {
     font-size: 24px;
     padding: 0 25px 15px;
-    color: #333;
+    color: #151D28;
     font-weight: 600;
 }
 
@@ -302,8 +313,8 @@ main {
 
 .btn-buy {
     flex: 1;
-    padding: 14px 0;
-    background-color: #c5a063;
+    padding: 10px 10px ;
+    background-color: #C7A17A;
     color: white;
     border: none;
     border-radius: 30px;
@@ -311,17 +322,17 @@ main {
     cursor: pointer;
     transition: all 0.3s;
     font-size: 16px;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
 }
 
 .btn-buy:hover {
-    background-color: #b08d4f;
+    background-color:#C7A17A;
     transform: scale(1.05);
 }
 
 .btn-details {
     flex: 1;
-    padding: 14px 0;
+    padding: 10px 10px;
     background-color: transparent;
     color: #c5a063;
     border: 2px solid #c5a063;
@@ -338,6 +349,8 @@ main {
     color: white;
     transform: scale(1.05);
 }
+
+
 
 /* Секция "Подарочный набор" */
 .giftset-section {
@@ -359,16 +372,16 @@ main {
     background: linear-gradient(90deg, #c5a063, #e6c28c);
 }
 
-.subtitle {
-    font-size: 16px;
+.section-subtitle {
+    font-size: 30px;
     text-transform: uppercase;
-    color: #c5a063;
-    letter-spacing: 3px;
+    color: #1e1a13;
+    letter-spacing: 2px;
     margin-bottom: 15px;
     font-weight: 600;
 }
 
-.title {
+.section-title {
     font-size: 42px;
     color: #333;
     margin-bottom: 50px;
@@ -382,7 +395,7 @@ main {
 }
 
 .giftset-content img {
-    width: 45%;
+    width: 80%;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
