@@ -36,7 +36,7 @@ header img[alt="Баннер с кофе на главной странице"] 
 header > div {
     position: absolute;
     top: 0px;
-    right: -564px ;
+    right: 564px ;
     transform: translateX(-50%);
     z-index: 3;
     background-color:#415167;
@@ -544,121 +544,308 @@ footer {
     letter-spacing: 1px;
 }
 
-/* Адаптивность */
-@media (max-width: 1200px) {
-    .features,
-    .products,
-    .combos {
-        justify-content: center;
+/* ===== АДАПТИВНОСТЬ ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ ===== */
+
+/* Телефоны (до 768px) */
+@media (max-width: 768px) {
+    /* Шапка */
+    header {
+        height: 70vh;
+        min-height: 500px;
     }
     
-    .feature,
-    .product,
-    .combo {
-        min-width: 300px;
-        max-width: 350px;
+    header img[alt="Баннер с кофе на главной странице"] {
+        width: 100%;
+        right: 0;
+    }
+    
+    header > div {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        height: 100vh;
+        padding: 80px 30px;
+        background-color: #415167;
+        transition: right 0.3s ease;
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    
+    header > div.active {
+        right: 0;
+    }
+    
+    /* Бургер-меню */
+    .menu-toggle {
+        display: block;
+        position: fixed;
+        top: 25px;
+        right: 25px;
+        width: 40px;
+        height: 30px;
+        background: transparent;
+        border: none;
+        z-index: 101;
+        cursor: pointer;
+    }
+    
+    .menu-toggle span {
+        display: block;
+        height: 3px;
+        width: 100%;
+        background-color: #415167;
+        margin: 5px 0;
+        transition: 0.3s;
+    }
+    
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(8px, 8px);
+        background-color: white;
+    }
+    
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(8px, -8px);
+        background-color: white;
+    }
+    
+    nav {
+        width: 100%;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        width: 100%;
+    }
+    
+    nav li {
+        width: 100%;
+    }
+    
+    nav a {
+        display: block;
+        padding: 10px 0;
+        font-size: 16px;
+        width: 100%;
+    }
+    
+    .logo {
+        top: 20px;
+        left: 20px;
+        width: 120px;
+    }
+    
+    header h1 {
+        position: absolute;
+        bottom: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        font-size: 28px;
+        text-align: center;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+        letter-spacing: 1px;
+        line-height: 1.3;
+    }
+    
+    /* Основной контент */
+    main {
+        padding: 40px 15px;
+        max-width: 100%;
+    }
+    
+    /* Секции */
+    section {
+        padding: 40px 0;
+        margin-bottom: 40px;
+    }
+    
+    .section-subtitle {
+        font-size: 13px;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+    }
+    
+    .section-title {
+        font-size: 28px;
+        margin-bottom: 30px;
+        padding-bottom: 15px;
+    }
+    
+    .section-title::after {
+        width: 60px;
+        height: 2px;
+    }
+    
+    /* Секция "Выберите Свой Любимый" */
+    .products {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+    
+    .product {
+        flex: 0 0 100%;
+        max-width: 320px;
+        min-width: unset;
+    }
+    
+    .product img {
+        height: 200px;
+    }
+    
+    .product-buttons {
+        flex-direction: column;
+    }
+    
+    .btn-buy, .btn-details {
+        width: 100%;
+        padding: 12px 20px;
+    }
+    
+    /* Секция "Подарочный набор" */
+    .giftset-section {
+        padding: 40px 20px;
+        margin-bottom: 40px;
     }
     
     .giftset-content {
         flex-direction: column;
-        gap: 40px;
+        gap: 30px;
     }
     
-    .giftset-content img {
-        width: 80%;
+    .giftset-image {
+        width: 100%;
+    }
+    
+    .giftset-image img {
+        width: 100%;
+        height: auto;
     }
     
     .giftset-info {
         width: 100%;
     }
     
-    header h1 {
-        font-size: 42px;
-        bottom: 100px;
-    }
-}
-
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        gap: 15px;
-        align-items: center;
-    }
-    
-    header > div {
-        width: 90%;
-        padding: 20px;
-    }
-    
-    header h1 {
-        font-size: 32px;
-        bottom: 80px;
-        padding: 0 20px;
-    }
-    
-    .logo {
-        width: 180px;
-        left: 50px;
-    }
-    
-    .base-section h3,
-    .favorites-section h3,
-    .title {
-        font-size: 32px;
-    }
-    
-    .giftset-section {
-        padding: 50px 30px;
-    }
-    
-    .giftset-details {
-        flex-direction: column;
-        gap: 30px;
-    }
-    
-    .feature,
-    .product,
-    .combo {
-        min-width: 100%;
-    }
-    
-    .buttons {
-        flex-direction: column;
-    }
-    
-    .btn-buy,
-    .btn-details {
-        width: 100%;
-    }
-}
-
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 24px;
-        bottom: 60px;
-        letter-spacing: 2px;
-    }
-    
-    .base-section h2,
-    .favorites-section h2,
-    .subtitle {
-        font-size: 14px;
-        letter-spacing: 2px;
-    }
-    
-    .base-section h3,
-    .favorites-section h3,
-    .title {
-        font-size: 28px;
-        margin-bottom: 40px;
-    }
-    
     .giftset-price {
         font-size: 36px;
+        margin-bottom: 15px;
     }
     
     .giftset-name {
         font-size: 22px;
+        margin-bottom: 20px;
+    }
+    
+    .giftset-description {
+        font-size: 16px;
+        margin-bottom: 30px;
+        line-height: 1.6;
+    }
+    
+    .giftset-details {
+        flex-direction: column;
+        gap: 25px;
+        margin-bottom: 30px;
+    }
+    
+    .detail-icon img {
+        width: 35px;
+        height: 35px;
+    }
+    
+    /* Секция "Комбо Фильтр-кофе" */
+    .combos {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+    
+    .combo {
+        min-width: 100%;
+        max-width: 320px;
+    }
+    
+    .combo img {
+        height: 200px;
+    }
+    
+    .combo-info {
+        padding: 25px;
+    }
+    
+    .combo-title {
+        font-size: 22px;
+    }
+    
+    .combo-description {
+        font-size: 15px;
+        min-height: auto;
+    }
+    
+    .current-price {
+        font-size: 28px;
+    }
+    
+    .old-price {
+        font-size: 20px;
+    }
+    
+    .combo-buttons {
+        flex-direction: column;
+    }
+    
+    /* Подвал */
+    footer {
+        padding: 30px 20px;
+        font-size: 14px;
+    }
+}
+
+/* Маленькие телефоны (до 480px) */
+@media (max-width: 480px) {
+    header {
+        height: 60vh;
+        min-height: 400px;
+    }
+    
+    header h1 {
+        font-size: 22px;
+        bottom: 60px;
+        letter-spacing: 1px;
+    }
+    
+    .logo {
+        width: 50px;
+    }
+    
+    .section-title {
+        font-size: 24px;
+    }
+    
+    .product-title, .combo-title {
+        font-size: 20px;
+    }
+    
+    .product-price {
+        font-size: 24px;
+    }
+    
+    .giftset-price {
+        font-size: 32px;
+    }
+    
+    .giftset-name {
+        font-size: 20px;
     }
     
     .current-price {
@@ -669,9 +856,71 @@ footer {
         font-size: 18px;
     }
     
-    main {
-        padding: 50px 15px;
+    .btn {
+        padding: 10px 15px;
+        font-size: 14px;
     }
 }
 
+/* Планшеты (от 769px до 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    header > div {
+        right: -400px;
+    }
+    
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+    }
+    
+    .product {
+        flex: 0 0 calc(50% - 15px);
+        max-width: 300px;
+    }
+    
+    .combos {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .combo {
+        min-width: 300px;
+        max-width: 300px;
+    }
+    
+    .giftset-content {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .giftset-image {
+        width: 45%;
+    }
+    
+    .giftset-info {
+        width: 55%;
+        padding-left: 30px;
+    }
+}
 
+/* Скрываем бургер-меню на десктопах */
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none;
+    }
+    
+    header > div {
+        right: 0;
+        transform: none;
+        width: auto;
+        height: auto;
+        padding: 20px 40px;
+        background-color: #415167;
+    }
+    
+    nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
