@@ -35,12 +35,12 @@ header img[alt="Баннер с кофе на главной странице"] 
 
 header > div {
     position: absolute;
+    height: 30px;
     top: 0px;
     right: 564px ;
     transform: translateX(-50%);
     z-index: 3;
     background-color:#415167;
-    padding: 30px 100px;
     border-radius: 0px;
     box-shadow: 0 4px 15px rgba(211, 201, 201, 0.1);
     word-spacing: 1px;
@@ -1028,12 +1028,13 @@ footer {
     }
     
     header > div {
-        right: 0;
-        transform: none;
-        width: auto;
-        height: auto;
-        padding: 20px 20px;
+        right: -494px;
+        width: -150px;
+        height: 10px;
         background-color: #415167;
+        padding: 35px 76px;
+        margin: 0;
+        text-align: center;
     }
     
     nav ul {
@@ -1043,7 +1044,7 @@ footer {
     }
 
     .logo {
-        top: 100px;
+        top: 20px;
         left: 20px;
         width: 120px;
     }
