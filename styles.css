@@ -45,6 +45,7 @@ header > div {
     box-shadow: 0 4px 15px rgba(211, 201, 201, 0.1);
     word-spacing: 1px;
     color: #f9f9f9;
+    align-items: center;
 
 }
 
@@ -693,7 +694,7 @@ footer {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 720px) {
 
     header {
         height: 70vh;
@@ -719,7 +720,7 @@ footer {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        align-items: flex-start;
+        align-items: center;
     }
     
     header > div.active {
@@ -970,10 +971,10 @@ footer {
     }
 }
 
-/* Планшеты (от 769px до 1024px) */
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 720px) and (max-width: 1024px) {
     header > div {
         right: -400px;
+        align-items: center;
     }
     
     .products {
