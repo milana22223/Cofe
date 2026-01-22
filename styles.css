@@ -614,6 +614,40 @@ footer {
     letter-spacing: 1px;
 }
 
+.scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 56px;
+    height: 56px;
+    background: #c5a063;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.scroll-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+.scroll-top:hover {
+    background: #c09b5f;
+    transform: scale(1.1);
+}
+
+.scroll-top:active {
+    transform: scale(0.95);
+}
+
 /* ============================= */
 /* МЕДИА-ЗАПРОСЫ */
 /* ============================= */
@@ -622,6 +656,9 @@ footer {
 @media (max-width: 900px) {
     .menu-toggle {
         display: flex;
+    }
+    .header {
+        position: sticky;
     }
     
     .nav-menu {
@@ -831,6 +868,14 @@ footer {
         padding: 30px 20px;
         font-size: 14px;
     }
+
+    .scroll-top {
+        width: 52px;
+        height: 52px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 22px;
+    }
 }
 
 /* ДЕСКТОПНАЯ ВЕРСИЯ (601px и выше) */
@@ -914,6 +959,13 @@ footer {
     header h1 {
         font-size: 36px;
         bottom: 100px;
+    }
+     .scroll-top {
+         width: 52px;
+        height: 52px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 22px;
     }
 }
 
