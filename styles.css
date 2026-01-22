@@ -731,6 +731,29 @@ footer {
 
 @media (max-width: 720px) {
 
+    .nav.active {
+ right: 0;
+ }
+
+ .nav__list {
+ flex-direction: column;
+ gap: 0;
+ }
+
+ .nav__item {
+ width: 100%;
+ }
+
+ .nav__link {
+ display: block;
+ width: 100%;
+ padding: 15px 0;
+ font-size: 18px; /* Увеличиваем для мобильных */
+ border-bottom: 1px solid #eee;
+ }
+
+ 
+
     header {
         height: 70vh;
         min-height: 500px;
@@ -1050,6 +1073,20 @@ footer {
         width: 55%;
         padding-left: 30px;
     }
+
+    .nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 300px;
+        height: 100vh;
+        background: white;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        padding: 80px 30px 30px;
+        transition: right 0.4s ease;
+        z-index: 1000;
+        overflow-y: auto;
+    }
 }
 
 
@@ -1080,4 +1117,24 @@ footer {
         left: 20px;
         width: 120px;
     }
+}
+
+.nav__list {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+.nav__link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 17px; /* HIG рекомендация */
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: var(--transition);
+}
+.nav__link:hover,
+.nav__link.active {
+     background: var(--secondary-color);
+    color: var(--primary-color);
 }
